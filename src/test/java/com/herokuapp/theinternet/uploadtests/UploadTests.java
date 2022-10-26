@@ -7,14 +7,13 @@ import org.testng.annotations.Test;
 
 public class UploadTests extends TestUtilities {
 
-    @Test
-    public void imageUpLoadTest() {
-        log.info("Starting imageUploadTest");
+    @Test(dataProvider="files")
+    public void fileUpLoadTest(int no, String filename) {
+        log.info("Starting fileUploadTest #" + no + " for " + filename);
 
         FileUploaderPage fileUploaderPage = new FileUploaderPage(driver, log);
         fileUploaderPage.openPage();
 
-        String filename = "logo.png";
         fileUploaderPage.selectFile(filename);
 
         fileUploaderPage.pushUploadButton();

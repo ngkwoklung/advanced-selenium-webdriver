@@ -7,7 +7,7 @@ import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.DropdownPage;
 import com.herokuapp.theinternet.pages.WelcomePage;
 
-public class DropdownTest extends TestUtilities {
+public class DropdownTests extends TestUtilities {
 	
 	@Test
 	public void optionTwoTest() {
