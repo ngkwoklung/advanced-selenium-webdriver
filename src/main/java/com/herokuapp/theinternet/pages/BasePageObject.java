@@ -104,7 +104,7 @@ public class BasePageObject {
 		Iterator<String> windowsIterator = allWindows.iterator();
 
 		while (windowsIterator.hasNext()) {
-			String windowHandle = windowsIterator.next().toString();
+			String windowHandle = windowsIterator.next();
 			if (!windowHandle.equals(firstWindow)) {
 				driver.switchTo().window(windowHandle);
 				if (getCurrentPageTitle().equals(expectedTitle)) {
@@ -158,5 +158,16 @@ public class BasePageObject {
 	protected void hoverOverElement(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).build().perform();
+	}
+
+	public void setCookie(Cookie cookie) {
+		log.info("Adding cookie " + cookie.getName());
+		driver.manage().addCookie(cookie);
+		log.info("Cookie added");
+	}
+
+	public String getCookie(String name) {
+		log.info("Getting value of cookie " + name);
+		return driver.manage().getCookieNamed(name).getValue();
 	}
 }

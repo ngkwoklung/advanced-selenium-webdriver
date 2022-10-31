@@ -25,7 +25,6 @@ public class DropdownTests extends TestUtilities {
 
 		// Verify Option 2 is selected
 		String selectedOption = dropdownPage.getSelectedOption();
-		Assert.assertTrue(selectedOption.equals("Option 2"),
-				"Option 2 is not selected. Instead selected - " + selectedOption);
+        Assert.assertEquals(selectedOption, "Option 2", "Option 2 is not selected. Instead selected - " + selectedOption);
 	}
 }

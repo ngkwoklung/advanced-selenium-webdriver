@@ -14,6 +14,6 @@ public class HorizontalSliderTests extends TestUtilities {
         double value = 3.5;
         horizontalSliderPage.setSliderTo(value);
         String sliderValue = horizontalSliderPage.getSliderValue();
-        Assert.assertTrue(sliderValue.equals(String.valueOf(value)), "Range is not correct. It is: " + sliderValue);
+        Assert.assertEquals(String.valueOf(value), sliderValue, "Range is not correct. It is: " + sliderValue);
     }
 }

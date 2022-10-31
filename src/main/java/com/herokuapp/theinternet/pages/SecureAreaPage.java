@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 
 public class SecureAreaPage extends BasePageObject {
 
-	private String pageUrl = "http://the-internet.herokuapp.com/secure";
+	private final String pageUrl = "http://the-internet.herokuapp.com/secure";
 
-	private By logOutButton = By.xpath("//a[@class='button secondary radius']");
-	private By message = By.id("flash-messages");
+	private final By logOutButton = By.xpath("//a[@class='button secondary radius']");
+	private final By message = By.id("flash-messages");
 
 	public SecureAreaPage(WebDriver driver, Logger log) {
 		super(driver, log);

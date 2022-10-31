@@ -14,4 +14,10 @@
 		</classes>
 	</test>
 	
+	<test name="UploadTests">
+		<classes>
+			<class name="com.herokuapp.theinternet.uploadtests.UploadTests" />
+		</classes>
+	</test>
+	
 </suite>
