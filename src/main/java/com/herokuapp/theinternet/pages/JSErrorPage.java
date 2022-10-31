@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class JSErrorPage extends BasePageObject {
 
-	private String pageUrl = "http://the-internet.herokuapp.com/javascript_error";
+	private final String pageUrl = "http://the-internet.herokuapp.com/javascript_error";
 
 	public JSErrorPage(WebDriver driver, Logger log) {
 		super(driver, log);

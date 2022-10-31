@@ -3,28 +3,28 @@
 <suite name="DropdownHeadlessTestSuite" verbose="1">
 
 	<test name="DropdownTests-CH">
-		<parameter name="browser" value="chromeheadless"></parameter>
+		<parameter name="browser" value="chromeheadless"/>
 		<classes>
 			<class name="com.herokuapp.theinternet.dropdowntests.DropdownTests" />
 		</classes>
 	</test>
 
 	<test name="DropdownTests-FF">
-		<parameter name="browser" value="firefoxheadless"></parameter>
+		<parameter name="browser" value="firefoxheadless"/>
 		<classes>
 			<class name="com.herokuapp.theinternet.dropdowntests.DropdownTests" />
 		</classes>
 	</test>
 
 	<test name="DropdownTests-PH">
-		<parameter name="browser" value="phantomjs"></parameter>
+		<parameter name="browser" value="phantomjs"/>
 		<classes>
 			<class name="com.herokuapp.theinternet.dropdowntests.DropdownTests" />
 		</classes>
 	</test>
 
 	<test name="DropdownTests-UN">
-		<parameter name="browser" value="htmlunit"></parameter>
+		<parameter name="browser" value="htmlunit"/>
 		<classes>
 			<class name="com.herokuapp.theinternet.dropdowntests.DropdownTests" />
 		</classes>

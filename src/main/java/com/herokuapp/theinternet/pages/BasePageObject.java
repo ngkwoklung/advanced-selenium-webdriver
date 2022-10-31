@@ -104,7 +104,7 @@ public class BasePageObject {
 		Iterator<String> windowsIterator = allWindows.iterator();
 
 		while (windowsIterator.hasNext()) {
-			String windowHandle = windowsIterator.next().toString();
+			String windowHandle = windowsIterator.next();
 			if (!windowHandle.equals(firstWindow)) {
 				driver.switchTo().window(windowHandle);
 				if (getCurrentPageTitle().equals(expectedTitle)) {
