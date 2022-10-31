@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.EditorPage;
-import com.herokuapp.theinternet.pages.WelcomePageObject;
+import com.herokuapp.theinternet.pages.WelcomePage;
 
 public class EditorTests extends TestUtilities {
 
@@ -14,8 +14,10 @@ public class EditorTests extends TestUtilities {
 		log.info("Starting defaultEditorValueTest");
 
 		// open main page
-		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		WelcomePage welcomePage = new WelcomePage(driver, log);
 		welcomePage.openPage();
+
+		welcomePage.scrollToBottom();
 
 		// Click on WYSIWYG Editor link
 		EditorPage editorPage = welcomePage.clickWYSIWYGEditorLink();
@@ -24,7 +26,6 @@ public class EditorTests extends TestUtilities {
 		String editorText = editorPage.getEditorText();
 
 		// Verification that new page contains expected text in source
-		Assert.assertTrue(editorText.equals("Your content goes here."),
-				"Editor default text is not expected. It is: " + editorText);
+		Assert.assertEquals(editorText,"Your content goes here.");
 	}
 }

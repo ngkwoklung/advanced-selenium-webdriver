@@ -2,20 +2,21 @@ package com.herokuapp.theinternet.pages;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-public class WelcomePageObject extends BasePageObject {
+public class WelcomePage extends BasePageObject {
 
-	private String pageUrl = "http://the-internet.herokuapp.com/";
+	private final String pageUrl = "http://the-internet.herokuapp.com/";
 
-	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
-	private By checkboxesLinkLocator = By.linkText("Checkboxes");
-	private By dropdownLinkLocator = By.linkText("Dropdown");
-	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
-	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
-	private By editorLinkLocator = By.linkText("WYSIWYG Editor");
+	private final By formAuthenticationLinkLocator = By.linkText("Form Authentication");
+	private final By checkboxesLinkLocator = By.linkText("Checkboxes");
+	private final By dropdownLinkLocator = By.linkText("Dropdown");
+	private final By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
+	private final By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
+	private final By editorLinkLocator = By.linkText("WYSIWYG Editor");
 	
-	public WelcomePageObject(WebDriver driver, Logger log) {
+	public WelcomePage(WebDriver driver, Logger log) {
 		super(driver, log);
 	}
 
@@ -64,4 +65,9 @@ public class WelcomePageObject extends BasePageObject {
 		return new EditorPage(driver, log);
 	}
 
+	public void scrollToBottom() {
+		log.info("Scrolling to the bottom of the page");
+		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+		javascriptExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
 }

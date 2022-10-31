@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 
 public class JavaScriptAlertsPage extends BasePageObject {
 
-	private By clickForJSAlertButtonLocator = By.xpath("//button[text()='Click for JS Alert']");
-	private By clickForJSConfirmButtonLocator = By.xpath("//button[text()='Click for JS Confirm']");
-	private By clickForJSPromptButtonLocator = By.xpath("//button[text()='Click for JS Prompt']");
-	private By resultTextLocator = By.id("result");
+	private final By clickForJSAlertButtonLocator = By.xpath("//button[text()='Click for JS Alert']");
+	private final By clickForJSConfirmButtonLocator = By.xpath("//button[text()='Click for JS Confirm']");
+	private final By clickForJSPromptButtonLocator = By.xpath("//button[text()='Click for JS Prompt']");
+	private final By resultTextLocator = By.id("result");
 
 	public JavaScriptAlertsPage(WebDriver driver, Logger log) {
 		super(driver, log);

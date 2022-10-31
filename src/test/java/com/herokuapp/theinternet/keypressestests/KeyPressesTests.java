@@ -24,8 +24,7 @@ public class KeyPressesTests extends TestUtilities {
 		String result = keyPressesPage.getResultText();
 
 		// Verify Result text is expected
-		Assert.assertTrue(result.equals("You entered: ENTER"),
-				"result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
+        Assert.assertEquals(result, "You entered: ENTER", "result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
 	}
 
 	@Test
@@ -43,7 +42,6 @@ public class KeyPressesTests extends TestUtilities {
 		String result = keyPressesPage.getResultText();
 
 		// Verify Result text is expected
-		Assert.assertTrue(result.equals("You entered: SPACE"),
-				"result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
+        Assert.assertEquals(result, "You entered: SPACE", "result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
 	}
 }
