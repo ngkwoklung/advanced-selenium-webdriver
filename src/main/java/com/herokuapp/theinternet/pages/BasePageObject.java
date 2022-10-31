@@ -159,4 +159,15 @@ public class BasePageObject {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).build().perform();
 	}
+
+	public void setCookie(Cookie cookie) {
+		log.info("Adding cookie " + cookie.getName());
+		driver.manage().addCookie(cookie);
+		log.info("Cookie added");
+	}
+
+	public String getCookie(String name) {
+		log.info("Getting value of cookie " + name);
+		return driver.manage().getCookieNamed(name).getValue();
+	}
 }

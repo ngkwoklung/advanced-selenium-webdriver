@@ -1,10 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="SmokeTestSuite" verbose="1">
-
-	<listeners>
-		<listener class-name="com.herokuapp.theinternet.base.TestListener"/>
-	</listeners>
 	
 	<test name="PositiveLogInTest">
 		<classes>
